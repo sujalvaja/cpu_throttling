@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg1">
+
+    <RelativeLayout
+        android:id="@+id/rline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp">
+
+        <TextView
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@drawable/title" />
+        <!--
+
+              <LinearLayout
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical"
+                  android:layout_marginTop="@dimen/_40sdp"
+                  >
+
+                 <ImageView
+                     android:id="@+id/ADS"
+                     android:layout_width="@dimen/_20sdp"
+                     android:layout_height="@dimen/_20sdp"/>
+                 <ImageView
+                     android:id="@+id/INFO"
+                     android:layout_width="@dimen/_20sdp"
+                     android:layout_height="@dimen/_20sdp"/>
+              </LinearLayout>
+        -->
+        <LinearLayout
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:layout_marginEnd="@dimen/_13sdp"
+            android:background="@drawable/ad_bg"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:src="@drawable/ad_icn" />
+
+            <ImageView
+                android:id="@+id/info"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:src="@drawable/info_icn" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_70sdp"
+        android:layout_below="@id/rline"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonBatteryTemp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:background="@drawable/mainpagebutton"
+            android:gravity="center"
+            android:text="@string/Cpuinformation"
+            android:textColor="@color/white"
+            android:paddingVertical="@dimen/_10sdp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/cpufre"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/buttonBatteryTemp"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:background="@drawable/mainpagebutton"
+            android:gravity="center"
+            android:text="@string/CpuFrequency"
+            android:textColor="@color/white"
+            android:paddingVertical="@dimen/_10sdp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/otherinfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cpufre"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:background="@drawable/mainpagebutton"
+            android:gravity="center"
+            android:text="@string/otherinformation"
+            android:textColor="@color/white"
+            android:paddingVertical="@dimen/_10sdp"/>
+
+    </LinearLayout>
+</RelativeLayout>

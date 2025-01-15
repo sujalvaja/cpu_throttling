@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/_8sdp">
+
+
+    <LinearLayout
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+
+        android:weightSum="2">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_30sdp"
+
+            android:layout_weight="0.2"
+            android:gravity="center"
+            android:src="@drawable/back_icn" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_gravity="center"
+            android:layout_weight="1.7"
+            android:gravity="center"
+            android:fontFamily="@font/robotomedium"
+            android:text="@string/cpu_frequency"
+            android:textColor="#070C2C"
+            android:textSize="@dimen/_15sdp" />
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:backgroundTint="#F3F6FF"
+        app:cardCornerRadius="@dimen/_15sdp">
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/chart1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_250sdp"
+            android:layout_margin="@dimen/_10sdp"
+            android:background="@drawable/infoview"
+            android:backgroundTint="#F3F6FF" />
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chart1"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/robotomedium"
+        android:text="Total Frequency"
+        android:textAllCaps="true"
+        android:textColor="#294FE6"
+        android:textSize="@dimen/_12sdp" />
+
+    <TextView
+        android:id="@+id/cpu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chart1"
+        android:layout_gravity="center"
+        android:fontFamily="@font/robotobold"
+
+        android:textAllCaps="true"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#294FE6"
+        android:textSize="@dimen/_14sdp" />
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:backgroundTint="#F3F6FF"
+        app:cardCornerRadius="@dimen/_15sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentEnd="true"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginVertical="@dimen/_10sdp">
+
+            <TextView
+                android:id="@+id/core0freq"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/core1freq"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="@font/robotomedium"
+                android:text="N/A"
+                android:textAlignment="textEnd"
+                android:textColor="#7A89BD"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/core0label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:fontFamily="@font/robotomedium"
+                android:text="Core 1:"
+                android:textColor="#7A89BD"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/core1label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/core0label"
+                android:layout_alignParentStart="true"
+                android:fontFamily="@font/robotomedium"
+                android:text="Core 2:"
+                android:textColor="#7A89BD"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/core2label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/core1label"
+                android:layout_alignParentStart="true"
+                android:fontFamily="@font/robotomedium"
+                android:text="Core 3:"
+                android:textColor="#7A89BD"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/core3label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/core2label"
+                android:fontFamily="@font/robotomedium"
+                android:text="Core 4:"
+                android:textColor="#7A89BD"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/core1freq"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/core0freq"
+                android:layout_alignTop="@+id/core1label"
+                android:fontFamily="@font/robotomedium"
+                android:text="N/A"
+                android:textAlignment="textEnd"
+                android:textColor="#7A89BD"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/core2freq"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/core1freq"
+                android:layout_alignStart="@+id/core1freq"
+                android:text="N/A"
+                android:fontFamily="@font/robotomedium"
+                android:textAlignment="textEnd"
+                android:textColor="#7A89BD"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/core3freq"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/core2freq"
+                android:layout_alignStart="@+id/core2freq"
+                android:text="N/A"
+                android:fontFamily="@font/robotomedium"
+                android:textAlignment="textEnd"
+                android:textColor="#7A89BD"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/core4freq"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/core3freq"
+                android:layout_alignParentEnd="true"
+                android:text="N/A"
+                android:fontFamily="@font/robotomedium"
+                android:textAlignment="textEnd"
+                android:textColor="#7A89BD"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/core4label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/core3label"
+                android:layout_alignParentStart="true"
+                android:text="Core 4:"
+                android:fontFamily="@font/robotomedium"
+                android:textColor="#7A89BD"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/core5freq"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/core4freq"
+                android:layout_alignParentEnd="true"
+                android:text="N/A"
+                android:fontFamily="@font/robotomedium"
+                android:textAlignment="textEnd"
+                android:textColor="#7A89BD"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/core5label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/core4label"
+                android:layout_alignParentStart="true"
+                android:text="Core 5:"
+                android:fontFamily="@font/robotomedium"
+                android:textColor="#7A89BD"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/core6freq"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/core5freq"
+                android:layout_alignParentEnd="true"
+                android:text="N/A"
+                android:fontFamily="@font/robotomedium"
+                android:textAlignment="textEnd"
+                android:textColor="#7A89BD"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/core6label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/core5label"
+                android:layout_alignParentStart="true"
+                android:text="Core 6:"
+                android:fontFamily="@font/robotomedium"
+                android:textColor="#7A89BD"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/core7freq"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/core6freq"
+                android:layout_alignParentEnd="true"
+                android:text="N/A"
+                android:fontFamily="@font/robotomedium"
+                android:textAlignment="textEnd"
+                android:textColor="#7A89BD"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/core6label"
+                android:layout_alignParentStart="true"
+                android:text="Core 7:"
+                android:fontFamily="@font/robotomedium"
+                android:textColor="#7A89BD"
+                android:textSize="20dp" />
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

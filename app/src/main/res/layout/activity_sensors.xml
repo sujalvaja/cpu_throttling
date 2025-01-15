@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rline"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.activity.Sensors">
+
+
+
+    <LinearLayout
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:weightSum="2"
+        android:layout_marginTop="@dimen/_15sdp">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_30sdp"
+            android:src="@drawable/back_icn"
+            android:layout_weight="0.2"
+            android:layout_gravity="center"
+            android:gravity="center"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_weight="1.7"
+            android:text="@string/phone_sensors"
+            android:fontFamily="@font/robotomedium"
+            android:textSize="@dimen/_15sdp"
+            android:textColor="#070C2C"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line1"
+        android:layout_marginTop="@dimen/_10sdp">
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:src="@drawable/sensors_icn"
+            android:background="@drawable/betteryinfo"
+            android:padding="@dimen/_5sdp"
+            android:elevation="@dimen/_30sdp"
+            android:layout_centerHorizontal="true"
+            />
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/image">
+      <ListView
+      android:id="@+id/listView1"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/_10sdp"
+      android:layout_marginEnd="@dimen/_10sdp"
+      android:divider="@null"
+      android:clickable="false"
+      android:listSelector="@android:color/transparent"
+      /></RelativeLayout>
+
+       <!-- </androidx.cardview.widget.CardView>-->
+    </RelativeLayout>
+
+
+</RelativeLayout>

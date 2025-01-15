@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hard_soft_info">Hardware and Software Information</string>
+    <string name="serial">SERIAL: </string>
+    <string name="model">MODEL: </string>
+    <string name="id">ID: </string>
+    <string name="manufacturer">MANUFACTURER: </string>
+    <string name="brand">BRAND: </string>
+    <string name="type">TYPE: </string>
+    <string name="user">USER: </string>
+    <string name="incremental">INCREMENTAL: </string>
+    <string name="sdk">SDK: </string>
+    <string name="board">BOARD: </string>
+    <string name="host">HOST: </string>
+    <string name="fingerprint">FINGERPRINT: </string>
+    <string name="versioncode">VERSION CODE: </string>
+
+    <string name="Cpuinformation">Cpu information</string>
+    <string name="CpuFrequency">Cpu \n Frequency</string>
+    <string name="otherinformation">other\ninformation</string>
+    <string name="cpu_information">CPU information</string>
+    <string name="cpu_frequency">CPU frequency</string>
+    <string name="other_information">Other information</string>
+    <string name="ram_n_info">RAM \n INFO</string>
+    <string name="device_n_info">DEVICE \n INFO</string>
+    <string name="battery_n_info">BATTERY \n INFO</string>
+    <string name="phone_nsensors">PHONE \nSENSORS</string>
+    <string name="battery_information">Battery information</string>
+    <string name="ram_information">Ram Information</string>
+    <string name="total_memory">Total Memory</string>
+    <string name="free_memory">Free Memory</string>
+    <string name="runtimetotalmemory">Runtime Total Memory</string>
+    <string name="runtimemaxmemory">Runtime Max Memory</string>
+    <string name="runtimefreememory">Runtime Free Memory</string>
+    <string name="phone_sensors">Phone Sensors</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+</resources>

@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".UI.activity.InfoActivity.BatteryInfo"
+    android:padding="@dimen/_1sdp">
+
+    <LinearLayout
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+
+        android:weightSum="2">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_weight="0.2"
+            android:src="@drawable/back_icn" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_weight="1.7"
+            android:fontFamily="@font/robotomedium"
+            android:text="@string/battery_information"
+            android:textColor="#070C2C"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textSize="@dimen/_15sdp" />
+
+    </LinearLayout>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@id/line1"
+    android:layout_marginTop="@dimen/_10sdp">
+     <ImageView
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:src="@drawable/battery_info_icn"
+        android:background="@drawable/betteryinfo"
+        android:padding="@dimen/_5sdp"
+         android:elevation="@dimen/_30sdp"
+        android:layout_centerHorizontal="true"
+        />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:backgroundTint="#F3F6FF"
+            android:paddingTop="@dimen/_10sdp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="@dimen/_10sdp"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingTop="@dimen/_20sdp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:layout_marginVertical="@dimen/_2sdp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/power_plug"
+                        android:fontFamily="@font/robotomedium"
+                        android:textColor="#8291C1"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/_12ssp"/>
+
+                    <TextView
+                        android:id="@+id/showPowerPlug"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:fontFamily="@font/robotomedium"
+                        android:textColor="#8291C1"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/_12ssp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/line2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:layout_marginVertical="@dimen/_2sdp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="@string/battery_status"
+                        android:fontFamily="@font/robotomedium"
+                        android:textColor="#8291C1"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/_12ssp"/>
+
+                    <TextView
+                        android:id="@+id/showBatteryStatus"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:fontFamily="@font/robotomedium"
+                        android:textColor="#8291C1"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/_12ssp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/line3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:fontFamily="@font/robotomedium"
+                    android:textColor="#8291C1"
+                    android:layout_marginVertical="@dimen/_2sdp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/battery_level"
+                        android:fontFamily="@font/robotomedium"
+                        android:textColor="#8291C1"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/_12ssp"/>
+
+                    <TextView
+                        android:id="@+id/showBatterLevel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_12ssp"
+                        android:fontFamily="@font/robotomedium"
+                        android:textColor="#8291C1"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:layout_marginVertical="@dimen/_2sdp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/battery_scale"
+                        android:fontFamily="@font/robotomedium"
+                        android:textColor="#8291C1"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/_12ssp"/>
+
+                    <TextView
+                        android:id="@+id/showBatteryScale"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_12ssp"
+                        android:fontFamily="@font/robotomedium"
+                        android:textColor="#8291C1"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:layout_marginVertical="@dimen/_2sdp">
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:fontFamily="@font/robotomedium"
+                        android:textColor="#8291C1"
+                        android:layout_height="wrap_content"
+                        android:text="@string/battery_temperature"
+                        android:textSize="@dimen/_12ssp"/>
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:id="@+id/showBatteryTemperature"
+                        android:layout_width="0dp"
+                        android:fontFamily="@font/robotomedium"
+                        android:textColor="#8291C1"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_12ssp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:layout_marginVertical="@dimen/_2sdp">
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:fontFamily="@font/robotomedium"
+                        android:textColor="#8291C1"
+                        android:layout_height="wrap_content"
+                        android:text="@string/battery_health"
+                        android:textSize="@dimen/_12ssp"/>
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:id="@+id/showBatteryHealth"
+                        android:layout_width="0dp"
+                        android:fontFamily="@font/robotomedium"
+                        android:textColor="#8291C1"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_12ssp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:layout_marginVertical="@dimen/_2sdp">
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:fontFamily="@font/robotomedium"
+                        android:textColor="#8291C1"
+                        android:layout_height="wrap_content"
+                        android:text="@string/battery_voltage"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <TextView
+                        android:id="@+id/showBatteryVoltage"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/robotomedium"
+                        android:textColor="#8291C1"
+
+                        android:textSize="@dimen/_12ssp" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/batteryTechnologyTitle"
+            style="@style/TextViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/battery_technology" />
+
+        <TextView
+            android:id="@+id/showBatteryTechnology"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp" />
+    </LinearLayout>-->
+
+    <!--<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/batteryCapacityTitle"
+    android:text="Battery Capacity"
+    style="@style/TextViewStyle"/>
+
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/showBatteryCapacity"
+    android:textSize="18sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/remainingBatteryCapacityTitle"
+    android:text="Remaining Battery Capacity"
+    style="@style/TextViewStyle"/>
+
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/showRemainingBatteryCapacity"
+    android:textSize="18sp"/>
+    </LinearLayout>-->
+
+    <!--<LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/bootTimeTitle"
+            style="@style/TextViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/time_since_boot" />
+
+        <TextView
+            android:id="@+id/showBootTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp" />
+    </LinearLayout>-->
+
+</RelativeLayout>
